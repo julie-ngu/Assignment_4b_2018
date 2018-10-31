@@ -94,7 +94,6 @@ public class Triangle {
 			_angleB = MAXANGSUM - _angleA - _angleC;
 			_sideA = (_sideC * Math.sin(Math.toRadians(_angleA))) / Math.sin(Math.toRadians(_angleC));
 			_sideB = (_sideC * Math.sin(Math.toRadians(_angleB))) / Math.sin(Math.toRadians(_angleC));	
-			System.out.print("\n" + _sideB);
 		}
 		else if(combo.equalsIgnoreCase("ASA")) {
 			_angleC = MAXANGSUM - _angleA - _angleB;
@@ -147,12 +146,12 @@ public class Triangle {
 			return _type;
 		} 
 		else {
-			_type = "\ntesterror";
+			//should not be here;
 			return _type;
 		}
 	}
 		
 	public void print() {
-		System.out.print("\nPerimeter: " + DECFORM.format(_perimeter) + " units" + "\nArea: " + DECFORM.format(_area) + " units");
+		System.out.print("\nPerimeter: " + DECFORM.format(_perimeter) + " units" + "\nArea: " + DECFORM.format(_area) + " units^2");
 	}
 }
